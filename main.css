@@ -1,131 +1,147 @@
-body{
-    font-family: "Helvetica Neue",
-      Arial,
-      "Hiragino Kaku Gothic ProN",
-      "Hiragino Sans",
-      Meiryo,
-      sans-serif;
-    background-color: #f0f0f0;
-}
-
-.contents_area{
-    background-color:#FFF;
-}
-
-.pair_def{
-    font-size: 0.85em;
-}
-
-p{
-    font-size: 0.85em;
-}
-
-h1{
-    font-size: 1.5em;
-}
-
-h2{
-    font-size: 1.2em;
-}
-
-input[type="range"] {
-	cursor: pointer;			/* カーソルを分かりやすく */
-	background: #8acdff;		/* バーの背景色 */
-	height: 14px;				/* バーの高さ */
-	width: 12cm;				/* スライダーの幅 */
-	border-radius: 10px;		/* バーの端の丸み */
-	border: solid 3px #dff1ff;	/* バーまわりの線 */
-}
-
-table{
-	border-collapse: collapse;
-}
-
-.border{
-	border: solid 1px #333;
-}
-
-input[type="button"]{
-	width: 5cm;
-	height: 1cm;
-}
-
-.inner{
-    margin:30px;
-}
-
-.inner2{
-    padding:5px 20px;
-}
-
-.inner3{
-    padding:30px 40px;
-}
-
-.btn-flat-simple{
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
-  padding: 0.25em 0.5em;
-  text-decoration: none;
-  color: white;
-  background:#00bcd4;
-  transition: .4s;
-  font-size: 1.2em;
-  cursor: pointer;
-}
-
-input .btn-flat-simple{
+/* 全体のフォントと背景設定 */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    background: none;
+    color: #202124;
+    line-height: 1.5;
+}
+
+/* コンテンツエリアのスタイル */
+.contents_area {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+/* 見出しのスタイル */
+h1 {
+    font-size: 2em;
+    font-weight: 500;
+    color: #202124;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #5f6368;
+    margin-bottom: 0.5em;
+}
+
+/* テキスト */
+p, .pair_def {
+    font-size: 1em;
+    color: #5f6368;
+    margin: 1em 0;
+}
+
+/* テーブル */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #dadce0;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f1f3f4;
+    font-weight: bold;
+    color: #202124;
+}
+
+/* ボタン */
+input[type="button"], .std_button {
+    background: #4285F4;
+    color: white;
     border: none;
-    border-radius: 0;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover, .std_button:hover {
+    background-color: #357ae8;
+}
+
+.btn-flat-simple {
+    background-color: transparent;
+    color: #4285F4;
+    border: 2px solid #4285F4;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-flat-simple:hover {
-  background: #ECECEC;
-  color: #00BCD4;
+    background-color: #4285F4;
+    color: white;
 }
 
-.std_button{
-    position: relative;
-    display: inline-block;
-    font-weight: bold;
-    padding: 0.25em 0.5em;
-    text-decoration: none;
-    background:#fff;
-    border: 2px solid #014897;
-    transition: .4s;
-    font-size: 1.0em;
+/* スライダー */
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    outline: none;
+    margin: 20px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4285F4;
+    border-radius: 50%;
     cursor: pointer;
-    color: #004386;
+    transition: background-color 0.3s ease;
 }
 
-.std_button:hover {
-    background-color: #e9f3fd;
+input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #357ae8;
 }
 
-#score{
-    background-color: #e9f3fd;
-    min-width: 400px;
-    min-height: 300px;
+/* スコアパネル */
+#score {
+    background-color: #f1f3f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
 }
 
+/* 内側のマージン・パディング */
+.inner {
+    margin: 30px;
+}
+
+.inner2 {
+    padding: 5px 20px;
+}
+
+.inner3 {
+    padding: 30px 40px;
+}
+
+/* リセットCSS（デフォルトのスタイルをオフ） */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-// リセットCSS（すでに指定済なら不要）
-* {
-  box-sizing: border-box;
-}
-
-.input-range {
-    height: 14px; // バーの高さ
-    width: 100%; // スライダーの幅
-  }
